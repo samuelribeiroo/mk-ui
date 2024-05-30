@@ -1,0 +1,87 @@
+@import url("breakpoint.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  image-rendering: optimizeQuality;
+  font-synthesis: none;
+  font-size: 81.25%; /* 13px */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-adjust: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --fontSans: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--fontSans);
+}
+
+.supported-platforms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 1rem;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12%;
+  padding: 0.5rem;
+}
+
+.footer-text p,
+.trigger-alert p {
+  color: #fff;
+  font-size: 10px;
+}
+
+.footer-text img {
+  margin-top: 1.9rem;
+}
+
+.trigger-alert {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin-left: -197px;
+}
+
+.trigger-alert p {
+  margin-left: -41px;
+}
+
+.terms-conditions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 1.5rem;
+}
+
+.terms-conditions a {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
