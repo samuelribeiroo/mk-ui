@@ -22,10 +22,32 @@ html {
 
 :root {
   --fontSans: "Roboto", sans-serif;
+  --backgroundHeader: rgb(24, 49, 83);
+  --backgroundGradient: linear-gradient(
+    295deg,
+    rgba(24, 49, 83, 1) 52%,
+    rgba(56, 96, 190, 1) 99%
+  );
+  --second-color: #0e1a2d;
 }
 
 body {
   font-family: var(--fontSans);
+}
+
+.header {
+  max-width: 100%;
+  padding: 0.3rem;
+  background: var(--backgroundHeader);
+  background: var(--backgroundGradient);
+  display: flex;
+  place-content: center;
+}
+
+.main-component {
+  background: url("../assets/about-bg-t.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .supported-platforms {
@@ -34,6 +56,11 @@ body {
   justify-content: center;
   gap: 28px;
   padding: 1rem;
+  padding-top: 1.5rem;
+}
+
+.supported-platforms img {
+  cursor: pointer;
 }
 
 .footer-container {
@@ -41,6 +68,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: var(--second-color);
 }
 
 .footer-text {
@@ -62,15 +90,12 @@ body {
 }
 
 .trigger-alert {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px;
-  margin-left: -197px;
-}
-
-.trigger-alert p {
-  margin-left: -41px;
+  width: 100%;
+  margin-left: -190px;
 }
 
 .terms-conditions {
@@ -78,10 +103,15 @@ body {
   align-items: center;
   gap: 18px;
   margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .terms-conditions a {
   color: #fff;
   font-size: 12px;
   text-decoration: none;
+}
+
+.terms-conditions a:hover {
+  filter: brightness(0.9);
 }
