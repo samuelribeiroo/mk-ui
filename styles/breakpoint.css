@@ -1,11 +1,24 @@
 @media (max-width: 1366px) {
-	html {
-		font-size: 80%;
-	}
+  html {
+    font-size: 80%;
+  }
 }
 
 @media (max-width: 768px) {
-	html {
-		font-size: 87.5%; 
-	}
+  .supported-platforms {
+    flex-wrap: wrap;
+  }
+
+  .trigger-alert {
+    padding: 1.5rem;
+    margin-left: 0px;
+  }
+
+  .trigger-alert img {
+    display: none;
+  }
+
+  html {
+    font-size: 87.5%;
+  }
 }
