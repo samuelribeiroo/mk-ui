@@ -5,8 +5,28 @@
 }
 
 @media (max-width: 768px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .characters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
   .supported-platforms {
     flex-wrap: wrap;
+  }
+
+  .display-name {
+    font-size: 12px;
+  }
+
+  .main-heading {
+    font-size: 2rem;
   }
 
   .trigger-alert {
@@ -17,8 +37,22 @@
   .trigger-alert img {
     display: none;
   }
+}
 
+@media (max-width: 600px) {
   html {
-    font-size: 87.5%;
+    font-size: 83.5%;
+  }
+
+  .characters-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .characters-container {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
