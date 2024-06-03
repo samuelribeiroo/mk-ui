@@ -29,10 +29,17 @@ html {
     rgba(56, 96, 190, 1) 99%
   );
   --second-color: #0e1a2d;
+  --primary-color: #223e6b;
+  --button-black-bg: #1a181c;
+  --white-font-color: #ffff;
+  --buy-button-hover: #004eb4;
 }
 
 body {
   font-family: var(--fontSans);
+  background-image: url("../assets/purchase-edition-bg.jpeg");
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .header {
@@ -44,10 +51,113 @@ body {
   place-content: center;
 }
 
-.main-component {
-  background: url("../assets/about-bg-t.jpg");
+.main-container {
+  text-align: center;
+  max-width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.characters-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 6.5rem;
+}
+
+.characters-container img:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
+}
+
+.main-heading {
+  letter-spacing: 0.6px;
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  padding-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+}
+
+.display-name,
+.logo-cta button {
+  background-color: #1a181c;
+  cursor: pointer;
+  border: none;
+  color: var(--white-font-color);
+  border-radius: 7px;
+  font-size: 0.987rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.display-name:hover {
+  background-color: var(--primary-color);
+}
+
+.news-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-font-color);
+  max-width: 100%;
+  height: 526px;
+  background-image: url("../assets/story-env-b.jpeg");
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+}
+
+.article-text {
+  margin-top: -90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.article-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.buy-container {
+  padding: 2.4rem;
+  background-color: var(--primary-color);
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-cta {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.article-text p {
+  margin-top: 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.logo-cta button {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 250px;
+  height: 60px;
+  border-radius: 6px;
+}
+
+.logo-cta button:hover {
+  background-color: var(--buy-button-hover);
+  filter: brightness(0.9);
+  transition: all ease-in-out 5ms;
 }
 
 .supported-platforms {
@@ -61,6 +171,11 @@ body {
 
 .supported-platforms img {
   cursor: pointer;
+}
+
+.footer-container img:hover {
+  cursor: pointer;
+  filter: brightness(0.7);
 }
 
 .footer-container {
