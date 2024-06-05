@@ -26,6 +26,8 @@ function mountCharactersComponent(character) {
   showCharacterName.style.marginTop = "32px";
   showCharacterName.classList.add("display-name");
 
+  showCharacterName.onclick = () => toggleModal(character);
+
   $containerCharacters.appendChild(charactersImage);
   charactersImage.after(showCharacterName);
   boxWrapper.appendChild(charactersImage);
@@ -34,6 +36,29 @@ function mountCharactersComponent(character) {
   $mainContainer.appendChild($containerCharacters);
 
   return { charactersImage };
+}
+
+function toggleModal(character) {
+  const modalTemplate = document.getElementById("modal-template").content.cloneNode(true);
+  const modalContainer = modalTemplate.querySelector(".modal");
+  const modalContent = modalContainer.querySelector(".modal-content");
+  const closeButton = modalContent.querySelector(".close");
+
+  modalContent.querySelector("p").textContent = `${character.name}`;
+
+  document.body.appendChild(modalContainer);
+
+  const showModal = modalContainer.style.display = "block";
+
+  closeButton.onclick = () => modalContainer.style.display = "none";
+
+  const handleClickOutside = window.onclick = event => {
+    if (event.target == modalContainer) {
+      modalContainer.style.display = "none";
+    }
+  };
+
+  return { showModal, handleClickOutside };
 }
 
 const displayCharactersUI = () => listCharacters.forEach(mountCharactersComponent);
