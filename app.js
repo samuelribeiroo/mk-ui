@@ -44,8 +44,17 @@ function toggleModal(character) {
   const modalContent = modalContainer.querySelector(".modal-content");
   const closeButton = modalContent.querySelector(".close");
 
-  modalContent.querySelector("p").textContent = `${character.name}`;
+  modalContent.querySelector("h3").textContent = `${character.details[0].attribute}`;
+  modalContent.querySelector("h1").textContent = `${character.name}`;
+  modalContent.querySelector("p").textContent = `${character.details[0].description}`;
+  modalContent.querySelector("h5").textContent = `${character.details[0].title}`;
 
+  const charactersImageModal = document.createElement("img");
+  charactersImageModal.src = character.image;
+  charactersImageModal.style.width = "550px";
+  charactersImageModal.style.height = "450px";
+
+  modalContent.appendChild(charactersImageModal);
   document.body.appendChild(modalContainer);
 
   const showModal = modalContainer.style.display = "block";
