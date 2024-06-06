@@ -21,7 +21,7 @@ function mountCharactersComponent(character) {
 
   const showCharacterName = document.createElement("button");
   showCharacterName.textContent = character.name;
-  showCharacterName.style.width = "108px";
+  showCharacterName.style.width = "128px";
   showCharacterName.style.height = "48px";
   showCharacterName.style.marginTop = "32px";
   showCharacterName.classList.add("display-name");
@@ -46,7 +46,7 @@ function toggleModal(character) {
 
   modalContent.querySelector("h3").textContent = `${character.details[0].attribute}`;
   modalContent.querySelector("h1").textContent = `${character.name}`;
-  modalContent.querySelector("p").textContent = `${character.details[0].description}`;
+  modalContent.querySelector( "p").textContent = `${character.details[0].description}`;
   modalContent.querySelector("h5").textContent = `${character.details[0].title}`;
 
   const charactersImageModal = document.createElement("img");
